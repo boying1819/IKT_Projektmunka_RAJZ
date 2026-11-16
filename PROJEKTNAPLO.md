@@ -1,0 +1,34 @@
+# Projektnapló – Konzolos rajzoló
+
+## Csapat és munkamegosztás
+
+| Név vagy GitHub-felhasználónév | Vállalt feladatok és szerep | Saját menüfunkció |
+|                 Nagy Bálint                              |                        Szabó Bence                            | 
+| Szín választás funkció, Kilépés, Ugrás középre           | Minta betöltése, Cella törlése, Karakter választása (gomb)    |
+| Golden Ratio kirajzolása                                 | Sinusz fügvény kirajzolása megadott adatok / függvény alapján |
+
+## Közös megállapodások
+
+- A rajzlap mérete és helye: A terminál 3/4 körülbelül
+- A két munkarész kapcsolódási pontja: ...
+- A módosítások egyeztetése a main ágon: …
+
+## Munkanapló
+
+| Dátum | Ki | Mi készült el vagy miben állapodtunk meg? | Következő lépés vagy commit |
+| 2026.11.16 | Nagy Bálint | Menü eltervezése képileg, Szín választás funkció létrehozása, Kilépés gomb elkészítése | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása|
+| 2026.11.16 | Szabó Bence | … | … |
+
+## Másik pár tesztje
+
+- Tesztelt commit: …
+- Visszajelzés és saját javítás: …
+- Újrateszt eredménye: …
+
+## Otthoni AI-használat
+
+Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult meg belőle.
+
+- Név: …
+- Miben kértem segítséget: …
+- Mit tanultam meg: …
