@@ -17,7 +17,7 @@
 
 | Dátum | Ki | Mi készült el vagy miben állapodtunk meg? | Következő lépés vagy commit |
 | 2026.11.16 | Nagy Bálint | Menü eltervezése képileg, Szín választás funkció létrehozása, Kilépés gomb elkészítése | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása|
-| 2026.11.16 | Szabó Bence | … | … |
+| 2026.11.16 | Szabó Bence | Sinus függvény alapjai, Minta betöltése alapjai | Karakter választása |
 
 ## Másik pár tesztje
 
@@ -29,6 +29,10 @@
 
 Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult meg belőle.
 
-- Név: …
-- Miben kértem segítséget: …
-- Mit tanultam meg: …
+- Név: Szabó Bence
+- Miben kértem segítséget: Fájlbeolvasásban
+- Mit tanultam meg: File.ReadAllLines()	--> Beolvassa a fájl összes sorát.
+
+- Név: Szabó Bence
+- Miben kértem segítséget: Hibajelzésben
+- Mit tanultam meg: catch  -->	Kezeli a betöltési hibákat.
