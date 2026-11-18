@@ -46,8 +46,34 @@
                     return false;
                 }
             }
+            static void Közepre()
+            {
+                int x = Console.WindowWidth / 2;
+                int y = Console.WindowHeight / 2;
+                Console.SetCursorPosition(x, y);
+            }
+            static void goldenRatio()
+        {
+            Console.Write("Add meg a szélességet: ");
+            int szelesseg = int.Parse(Console.ReadLine());
+            Console.Write("Add meg a magasságot: ");
+            int magassag = int.Parse(Console.ReadLine());
+            double arany = (double)szelesseg / magassag;
+            double goldenRatio = (1 + Math.Sqrt(5)) / 2;
+            Console.Clear();
+            Console.WriteLine($"A szélesség/magasság arány: {arany}");
+            Console.WriteLine($"Az aranyarány: {goldenRatio}");
+            if (Math.Abs(arany - goldenRatio) < 0.01)
+            {
+                Console.WriteLine("Ez az arány közel áll az aranyarányhoz!");
+            }
+            else
+            {
+                Console.WriteLine("Ez az arány nem közel áll az aranyarányhoz.");
+            }
+        }
 
-            static void Sinus(char karakter, ConsoleColor szin)
+        static void Sinus(char karakter, ConsoleColor szin)
             {
                 Console.Write("Add meg a szélességet: ");
                 int szelesseg = int.Parse(Console.ReadLine());

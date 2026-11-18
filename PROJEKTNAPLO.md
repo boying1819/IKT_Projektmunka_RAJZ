@@ -18,6 +18,7 @@
 | Dátum | Ki | Mi készült el vagy miben állapodtunk meg? | Következő lépés vagy commit |
 | 2026.11.16 | Nagy Bálint | Menü eltervezése képileg, Szín választás funkció létrehozása, Kilépés gomb elkészítése | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása|
 | 2026.11.16 | Szabó Bence | Sinus függvény alapjai, Minta betöltése alapjai | Karakter választása |
+| 2026.11.17 | Nagy Bálint | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása | Menü vizuális megjelenítése, miután készen van a maradék gomb, ami Bencére van bízva. Mozgatás elkészítése.|
 
 ## Másik pár tesztje
 
