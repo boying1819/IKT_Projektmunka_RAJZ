@@ -143,6 +143,32 @@
                 }
             }
         }
+        static char KarakterValasztas()
+        {
+            Console.WriteLine("Add meg a rajzkaraktert: ");
+
+            string karakter = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(karakter))
+            {
+                Console.Beep();
+                Console.WriteLine("Nem adtál meg karaktert!");
+                return '#';
+            }
+
+            return karakter[0];
+        }
+        static void CellaTorles(int x, int y, int rajzlapX, int rajzlapY)
+        {
+            int regiX = Console.CursorLeft;
+            int regiY = Console.CursorTop;
+
+            Console.SetCursorPosition(rajzlapX + x, rajzlapY + y);
+
+            Console.Write(' ');
+
+            Console.SetCursorPosition(regiX, regiY);
+        }
 
         static void Main(string[] args)
         {

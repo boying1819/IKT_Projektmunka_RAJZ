@@ -19,6 +19,8 @@
 | 2026.11.16 | Nagy Bálint | Menü eltervezése képileg, Szín választás funkció létrehozása, Kilépés gomb elkészítése | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása|
 | 2026.11.16 | Szabó Bence | Sinus függvény alapjai, Minta betöltése alapjai | Karakter választása |
 | 2026.11.17 | Nagy Bálint | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása | Menü vizuális megjelenítése, miután készen van a maradék gomb, ami Bencére van bízva. Mozgatás elkészítése.|
+| 2026.11.20 | Szabó Bence | Karakter választása, Cella törlése funkciók alapjai | Menü vizuális megjelenítése és felosztása, tesztelések és finomítások |
+
 
 ## Másik pár tesztje
 
@@ -37,3 +39,7 @@ Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult 
 - Név: Szabó Bence
 - Miben kértem segítséget: Hibajelzésben
 - Mit tanultam meg: catch  -->	Kezeli a betöltési hibákat.
+
+- Név: Szabó Bence
+- Miben kértem segítséget: Értékek ellenőrzésében
+- Mit tanultam meg: string.IsNullOrEmpty(karakter) -->	Megvizsgálja, hogy a változó üres vagy null értékű-e.
