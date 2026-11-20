@@ -20,6 +20,7 @@
 | 2026.11.16 | Szabó Bence | Sinus függvény alapjai, Minta betöltése alapjai | Karakter választása |
 | 2026.11.17 | Nagy Bálint | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása | Menü vizuális megjelenítése, miután készen van a maradék gomb, ami Bencére van bízva. Mozgatás elkészítése.|
 | 2026.11.20 | Szabó Bence | Karakter választása, Cella törlése funkciók alapjai | Menü vizuális megjelenítése és felosztása, tesztelések és finomítások |
+| 2026.11.20 | Nagy Bálint | Előmenü kidolgozása, breakelési lehetőségek megakadályozása a rajzlap méretezésénél, rajzlap létrehozása | A menü vizuális megjelenítése és felosztása Bencével, kódnak átvizsgálása, kódnak maradék breakelési lehetőségeit lekezelni|
 
 
 ## Másik pár tesztje
@@ -43,3 +44,7 @@ Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult 
 - Név: Szabó Bence
 - Miben kértem segítséget: Értékek ellenőrzésében
 - Mit tanultam meg: string.IsNullOrEmpty(karakter) -->	Megvizsgálja, hogy a változó üres vagy null értékű-e.
+
+- Név: Nagy Bálint
+- Miben kértem segítséget: Golden Ratio kirajzolásával
+- Mit tanultam meg: 1. Math.sqrt() --> A szám négyzetgyökét adja vissza. Math.abs() --> A szám abszolút értékét adja vissza.

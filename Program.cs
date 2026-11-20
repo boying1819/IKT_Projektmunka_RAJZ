@@ -56,13 +56,18 @@
         {
             Console.Write("Add meg a szélességet: ");
             int szelesseg = int.Parse(Console.ReadLine());
+
             Console.Write("Add meg a magasságot: ");
             int magassag = int.Parse(Console.ReadLine());
+
             double arany = (double)szelesseg / magassag;
             double goldenRatio = (1 + Math.Sqrt(5)) / 2;
+
             Console.Clear();
+
             Console.WriteLine($"A szélesség/magasság arány: {arany}");
             Console.WriteLine($"Az aranyarány: {goldenRatio}");
+
             if (Math.Abs(arany - goldenRatio) < 0.01)
             {
                 Console.WriteLine("Ez az arány közel áll az aranyarányhoz!");
@@ -168,6 +173,66 @@
             Console.Write(' ');
 
             Console.SetCursorPosition(regiX, regiY);
+        }
+        static void eloMenuEsRajzlap()
+        {
+            Console.Clear();
+            Console.WriteLine("1. Rajzlap létrehozása");
+            Console.WriteLine("2. Rajzlap törlése");
+            Console.WriteLine("3. Kilépés");
+        }
+        static void RajzlapLétrehozása()
+        {
+            Console.Clear();
+            Console.WriteLine("Add meg a rajzlap szélességét: ");
+            int szelesseg = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Add meg a rajzlap magasságát: ");
+            int magassag = int.Parse(Console.ReadLine());
+
+            Console.Clear();
+
+            for (int y = 0; y < magassag; y++)
+            {
+                for (int x = 0; x < szelesseg; x++)
+                {
+                    Console.SetCursorPosition(x, y);
+                    Console.Write('.');
+                }
+            }
+            if (szelesseg < Console.WindowWidth / 3 && magassag > Rajzoló_Console_App.WindowHeight - 2)
+            {
+                Console.Beep();
+                Console.WriteLine("A rajzlap túl nagy lett változtass a méretein!");
+
+            }
+        }
+        static void eloMenü()
+        {
+            while (true)
+            {
+                eloMenuEsRajzlap();
+                string valasztas = Console.ReadLine();
+                switch (valasztas)
+                {
+                    case "1":
+                        RajzlapLétrehozása();
+                        break;
+                    case "2":
+                        Console.Clear();
+                        break;
+                    case "3":
+                        if (Kilepes())
+                        {
+                            return;
+                        }
+                        break;
+                    default:
+                        Console.Beep();
+                        Console.WriteLine("Érvénytelen választás!");
+                        Console.Clear();
+                }
+            }
         }
 
         static void Main(string[] args)
