@@ -21,7 +21,7 @@
 | 2026.11.17 | Nagy Bálint | Ugrás a középre gomb elkészítése, Menü megalakításának utánna keresése, Golden Ratio kirajzolási funckiójának eltervezése / megalakítása | Menü vizuális megjelenítése, miután készen van a maradék gomb, ami Bencére van bízva. Mozgatás elkészítése.|
 | 2026.11.20 | Szabó Bence | Karakter választása, Cella törlése funkciók alapjai | Menü vizuális megjelenítése és felosztása, tesztelések és finomítások |
 | 2026.11.20 | Nagy Bálint | Előmenü kidolgozása, breakelési lehetőségek megakadályozása a rajzlap méretezésénél, rajzlap létrehozása | A menü vizuális megjelenítése és felosztása Bencével, kódnak átvizsgálása, kódnak maradék breakelési lehetőségeit lekezelni|
-
+| 2026.11.22 | Nagy Bálint | A menü és a rajzoló felület alap tervrajz kidolgozása | A menü és rajzlap szebbítése, breakelési lehetőségek megakadályozása, tesztelések elkezdése |
 
 ## Másik pár tesztje
 

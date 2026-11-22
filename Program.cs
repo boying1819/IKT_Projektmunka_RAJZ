@@ -2,6 +2,13 @@
 {
     internal class Program
     {
+
+        static char[,] lap = new char[12, 30];
+        static int x = 14, y = 5;
+        static char karakter = '#';
+        static ConsoleColor szin = ConsoleColor.Cyan;
+        static bool rajzol = false;
+
         static ConsoleColor Szinkeres()
         {
             Console.WriteLine("Válassz színt: ");
@@ -33,26 +40,26 @@
                     return ConsoleColor.White;
             }
         }
-            static bool Kilepes()
+        static bool Kilepes()
+        {
+            Console.WriteLine("Biztosan szeretnél kilépni? (I/N)");
+            string valasz = Console.ReadLine();
+            if (valasz.ToUpper() == "I")
             {
-                Console.WriteLine("Biztosan szeretnél kilépni? (I/N)");
-                string valasz = Console.ReadLine();
-                if (valasz.ToUpper() == "I")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return true;
             }
-            static void Közepre()
+            else
             {
-                int x = Console.WindowWidth / 2;
-                int y = Console.WindowHeight / 2;
-                Console.SetCursorPosition(x, y);
+                return false;
             }
-            static void goldenRatio()
+        }
+        static void Közepre()
+        {
+            x = 15;
+            y = 6;
+            Console.SetCursorPosition(x, y);
+        }
+        static void goldenRatio()
         {
             Console.Write("Add meg a szélességet: ");
             int szelesseg = int.Parse(Console.ReadLine());
@@ -79,73 +86,72 @@
         }
 
         static void Sinus(char karakter, ConsoleColor szin)
+        {
+            Console.Write("Add meg a szélességet: ");
+            int szelesseg = int.Parse(Console.ReadLine());
+
+            Console.Write("Add meg a magasságot: ");
+            int magassag = int.Parse(Console.ReadLine());
+
+            int kozep = magassag / 2;
+            int amplitudo = magassag / 3;
+
+            Console.Clear();
+            Console.ForegroundColor = szin;
+
+            for (int x = 0; x < szelesseg; x++)
             {
-                Console.Write("Add meg a szélességet: ");
-                int szelesseg = int.Parse(Console.ReadLine());
+                double szog = x * 2 * Math.PI / szelesseg;
 
-                Console.Write("Add meg a magasságot: ");
-                int magassag = int.Parse(Console.ReadLine());
+                int y = kozep - (int)(Math.Sin(szog) * amplitudo);
 
-                int kozep = magassag / 2;
-                int amplitudo = magassag / 3;
-
-                Console.Clear();
-                Console.ForegroundColor = szin;
-
-                for (int x = 0; x < szelesseg; x++)
-                {
-                    double szog = x * 2 * Math.PI / szelesseg;
-
-                    int y = kozep - (int)(Math.Sin(szog) * amplitudo);
-
-                    Console.SetCursorPosition(x, y);
-                    Console.Write(karakter);
-                }
-                Console.ResetColor();
+                Console.SetCursorPosition(x, y);
+                Console.Write(karakter);
             }
-            static void MintaBetoltes(ConsoleColor szin)
+            Console.ResetColor();
+        }
+        static void MintaBetoltes(ConsoleColor szin)
+        {
+            try
             {
-                try
-                {
-                    string[] sorok = System.IO.File.ReadAllLines("minta.txt");
+                string[] sorok = System.IO.File.ReadAllLines("minta.txt");
 
-                    int szelesseg = Console.WindowWidth;
-                    int magassag = Console.WindowHeight;
+                int szelesseg = Console.WindowWidth;
+                int magassag = Console.WindowHeight;
 
-                    if (sorok.Length > magassag)
-                    {
-                        Console.Beep();
-                        Console.WriteLine("A minta túl magas!");
-                        return;
-                    }
-
-                    foreach (string sor in sorok)
-                    {
-                        if (sor.Length > szelesseg)
-                        {
-                            Console.Beep();
-                            Console.WriteLine("A minta túl széles!");
-                            return;
-                        }
-                    }
-
-                    Console.Clear();
-
-                    Console.ForegroundColor = szin;
-
-                    for (int i = 0; i < sorok.Length; i++)
-                    {
-                        Console.SetCursorPosition(0, i);
-                        Console.Write(sorok[i]);
-                    }
-
-                    Console.ResetColor();
-                }
-                catch
+                if (sorok.Length > magassag)
                 {
                     Console.Beep();
-                    Console.WriteLine("Hiba! Nem sikerült betölteni a mintát.");
+                    Console.WriteLine("A minta túl magas!");
+                    return;
                 }
+
+                foreach (string sor in sorok)
+                {
+                    if (sor.Length > szelesseg)
+                    {
+                        Console.Beep();
+                        Console.WriteLine("A minta túl széles!");
+                        return;
+                    }
+                }
+
+                Console.Clear();
+
+                Console.ForegroundColor = szin;
+
+                for (int i = 0; i < sorok.Length; i++)
+                {
+                    Console.SetCursorPosition(0, i);
+                    Console.Write(sorok[i]);
+                }
+
+                Console.ResetColor();
+            }
+            catch
+            {
+                Console.Beep();
+                Console.WriteLine("Hiba! Nem sikerült betölteni a mintát.");
             }
         }
         static char KarakterValasztas()
@@ -174,71 +180,104 @@
 
             Console.SetCursorPosition(regiX, regiY);
         }
-        static void eloMenuEsRajzlap()
+        static void Kiir()
         {
-            Console.Clear();
-            Console.WriteLine("1. Rajzlap létrehozása");
-            Console.WriteLine("2. Rajzlap törlése");
-            Console.WriteLine("3. Kilépés");
-        }
-        static void RajzlapLétrehozása()
-        {
-            Console.Clear();
-            Console.WriteLine("Add meg a rajzlap szélességét: ");
-            int szelesseg = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(0, 0);
+            Console.WriteLine("KONZOLOS RAJZOLÓ         | RAJZLAP");
+            Console.WriteLine($"M: Menü   X: Kilépés     | Pozíció: ({x}, {y})");
+            Console.WriteLine($"Karakter: {karakter}  Eszköz: {(rajzol ? "lent" : "fent")}");
 
-            Console.WriteLine("Add meg a rajzlap magasságát: ");
-            int magassag = int.Parse(Console.ReadLine());
-
-            Console.Clear();
-
-            for (int y = 0; y < magassag; y++)
+            Console.ForegroundColor = szin;
+            for (int sor = 0; sor < 12; sor++)
             {
-                for (int x = 0; x < szelesseg; x++)
+                Console.Write("                         | ");
+                for (int oszlop = 0; oszlop < 30; oszlop++)
                 {
-                    Console.SetCursorPosition(x, y);
-                    Console.Write('.');
+                    if (sor == y && oszlop == x)
+                        Console.Write('█');
+                    else
+                        Console.Write(lap[sor, oszlop] == '\0' ? ' ' : lap[sor, oszlop]);
                 }
+                Console.WriteLine();
             }
-            if (szelesseg < Console.WindowWidth / 3 && magassag > Rajzoló_Console_App.WindowHeight - 2)
-            {
-                Console.Beep();
-                Console.WriteLine("A rajzlap túl nagy lett változtass a méretein!");
-
-            }
+            Console.ResetColor();
+            Console.WriteLine("Nyilak: mozgás   Szóköz: rajzolás fel/le");
         }
-        static void eloMenü()
+        static void Menu()
         {
-            while (true)
+            Console.Clear();
+            Console.WriteLine("1. Karakter választása");
+            Console.WriteLine("2. Szín választása");
+            Console.WriteLine("3. Minta betöltése");
+            Console.WriteLine("4. Cella törlése");
+            Console.WriteLine("5. Ugrás középre");
+            Console.WriteLine("6. Kilépés");
+
+            string valasztas = Console.ReadLine();
+            switch (valasztas)
             {
-                eloMenuEsRajzlap();
-                string valasztas = Console.ReadLine();
-                switch (valasztas)
-                {
-                    case "1":
-                        RajzlapLétrehozása();
-                        break;
-                    case "2":
-                        Console.Clear();
-                        break;
-                    case "3":
-                        if (Kilepes())
-                        {
-                            return;
-                        }
-                        break;
-                    default:
-                        Console.Beep();
-                        Console.WriteLine("Érvénytelen választás!");
-                        Console.Clear();
-                }
+                case "1":
+                    karakter = KarakterValasztas();
+                    break;
+                case "2":
+                    szin = Szinkeres();
+                    break;
+                case "3":
+                    MintaBetoltes(szin);
+                    break;
+                case "4":
+                    CellaTorles(x, y, 27, 3);
+                    break;
+                case "5":
+                    Közepre();
+                    break;
+                case "6":
+                    if (Kilepes()) Environment.Exit(0);
+                    break;
             }
+            Console.Clear();
         }
 
         static void Main(string[] args)
         {
-            Sinus('#', ConsoleColor.Cyan);
-            MintaBetoltes(ConsoleColor.Cyan);
+            Console.CursorVisible = false;
+
+            while (true)
+            {
+                Kiir();
+                ConsoleKeyInfo gomb = Console.ReadKey(true);
+
+                switch (gomb.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        if (y > 0) y--;
+                        if (rajzol) lap[y, x] = karakter;
+                        break;
+                    case ConsoleKey.DownArrow:
+                        if (y < 11) y++;
+                        if (rajzol) lap[y, x] = karakter;
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        if (x > 0) x--;
+                        if (rajzol) lap[y, x] = karakter;
+                        break;
+                    case ConsoleKey.RightArrow:
+                        if (x < 29) x++;
+                        if (rajzol) lap[y, x] = karakter;
+                        break;
+                    case ConsoleKey.Spacebar:
+                        rajzol = !rajzol;
+                        if (rajzol) lap[y, x] = karakter;
+                        break;
+                    case ConsoleKey.M:
+                        Menu();
+                        break;
+                    case ConsoleKey.X:
+                        if (Kilepes()) return;
+                        Console.Clear();
+                        break;
+                }
+            }
         }
     }
 }
