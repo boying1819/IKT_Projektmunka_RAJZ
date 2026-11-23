@@ -23,6 +23,7 @@
 | 2026.11.20 | Nagy Bálint | Előmenü kidolgozása, breakelési lehetőségek megakadályozása a rajzlap méretezésénél, rajzlap létrehozása | A menü vizuális megjelenítése és felosztása Bencével, kódnak átvizsgálása, kódnak maradék breakelési lehetőségeit lekezelni|
 | 2026.11.22 | Nagy Bálint | A menü és a rajzoló felület alap tervrajz kidolgozása | A menü és rajzlap szebbítése, breakelési lehetőségek megakadályozása, tesztelések elkezdése |
 | 2026.11.23 | Nagy Bálint | A rajzlap méretét növeltem és átállítottam 48×12-re, a bal oldali panelen kiírtam a pozíciót, a karaktert, a színt és az eszköz állapotát, és megcsináltam az F1–F12 nyomdákat (X, kereszt, négyzet, rombusz) és a Console.Beep-es részeket például amikor kimész a határon. | Ha maradt olyan amit javítani kell és Bencének nem megy abba besegíteni. |
+| 2026.11.23 | Szabó Bence | Dokumentált tesztelés, Tesztelés utánni finomítás, program átnézése és értelmezése | Utolsó átbeszélés a társammal és a projekt leadása. |
 
 ## Másik pár tesztje
 
@@ -57,3 +58,15 @@ Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult 
 - Név: Nagy Bálint
 - Miben kértem segítséget: A golden ratio rajzolási funkció helyesítésére / kijavítására.
 - Mit tanultam meg: Az golden ratio rajzolásánál megtanultam, hogy a konzolkarakter kb. kétszer olyan magas, mint széles, ezért a magasságot szélesség / phi / 2 alapján számoljuk.
+
+- Név: Szabó Bence
+- Miben kértem segítséget: Sinus tételnél
+- Mit tanultam meg: int.TryParse(..., out int szelesseg) --->  megpróbálja számmá alakítani az értéket, ha nem sikerül, akkor a szelesseg változó értéke 0 lesz.
+
+- Név: Szabó Bence
+- Miben kértem segítséget: Minta betöltésénél
+- Mit tanultam meg: Array.Clear(lap, 0, lap.Length): kitörli a teljes rajzlapot (minden cella '\0' lesz). Ezért törlődik a korábbi rajz sikeres betöltéskor. A lapSzin nem törlődik, de nem is kell, mert az üres cella színe nem látszik.
+
+- Név: Szabó Bence
+- Miben kértem segítséget: Minta törlésénél
+- Mit tanultam meg: "\0" ---> A rajzlap megadott részénél a karakter értékét null karakterre állítja, így a rajzlap megadott része törlődik.
