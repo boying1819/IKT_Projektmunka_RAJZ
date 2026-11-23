@@ -3,9 +3,9 @@
 ## Csapat és munkamegosztás
 
 | Név vagy GitHub-felhasználónév | Vállalt feladatok és szerep | Saját menüfunkció |
-|                 Nagy Bálint                              |                        Szabó Bence                            | 
+|                 Nagy Bálint                              |                        Szabó Bence                            |				
 | Szín választás funkció, Kilépés, Ugrás középre           | Minta betöltése, Cella törlése, Karakter választása (gomb)    |
-| Golden Ratio kirajzolása                                 | Sinusz fügvény kirajzolása megadott adatok / függvény alapján |
+| Golden Ratio kirajzolása, menü és rajzlap                | Sinusz fügvény kirajzolása megadott adatok / függvény alapján |
 
 ## Közös megállapodások
 
@@ -22,6 +22,7 @@
 | 2026.11.20 | Szabó Bence | Karakter választása, Cella törlése funkciók alapjai | Menü vizuális megjelenítése és felosztása, tesztelések és finomítások |
 | 2026.11.20 | Nagy Bálint | Előmenü kidolgozása, breakelési lehetőségek megakadályozása a rajzlap méretezésénél, rajzlap létrehozása | A menü vizuális megjelenítése és felosztása Bencével, kódnak átvizsgálása, kódnak maradék breakelési lehetőségeit lekezelni|
 | 2026.11.22 | Nagy Bálint | A menü és a rajzoló felület alap tervrajz kidolgozása | A menü és rajzlap szebbítése, breakelési lehetőségek megakadályozása, tesztelések elkezdése |
+| 2026.11.23 | Nagy Bálint | A rajzlap méretét növeltem és átállítottam 48×12-re, a bal oldali panelen kiírtam a pozíciót, a karaktert, a színt és az eszköz állapotát, és megcsináltam az F1–F12 nyomdákat (X, kereszt, négyzet, rombusz) és a Console.Beep-es részeket például amikor kimész a határon. | Ha maradt olyan amit javítani kell és Bencének nem megy abba besegíteni. |
 
 ## Másik pár tesztje
 
@@ -48,3 +49,11 @@ Aki használt AI-t, írja le a nevét, miben kért segítséget, és mit tanult 
 - Név: Nagy Bálint
 - Miben kértem segítséget: Golden Ratio kirajzolásával
 - Mit tanultam meg: 1. Math.sqrt() --> A szám négyzetgyökét adja vissza. Math.abs() --> A szám abszolút értékét adja vissza.
+
+- Név: Nagy Bálint
+- Miben kértem segítséget: A rajzolt cellák színének tárolásához kértem segítséget. 
+- Mit tanultam meg: Megértettem, hogy a karakterek mellé külön színtömb (lapSzin) kell, különben színváltáskor az egész rajz átszíneződne.
+
+- Név: Nagy Bálint
+- Miben kértem segítséget: A golden ratio rajzolási funkció helyesítésére / kijavítására.
+- Mit tanultam meg: Az golden ratio rajzolásánál megtanultam, hogy a konzolkarakter kb. kétszer olyan magas, mint széles, ezért a magasságot szélesség / phi / 2 alapján számoljuk.
