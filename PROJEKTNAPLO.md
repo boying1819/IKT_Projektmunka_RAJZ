@@ -25,6 +25,7 @@
 | 2026.11.23 | Nagy Bálint | A rajzlap méretét növeltem és átállítottam 48×12-re, a bal oldali panelen kiírtam a pozíciót, a karaktert, a színt és az eszköz állapotát, és megcsináltam az F1–F12 nyomdákat (X, kereszt, négyzet, rombusz) és a Console.Beep-es részeket például amikor kimész a határon. | Ha maradt olyan amit javítani kell és Bencének nem megy abba besegíteni. |
 | 2026.11.23 | Szabó Bence | Dokumentált tesztelés, Tesztelés utánni finomítás, program átnézése és értelmezése | Utolsó átbeszélés a társammal és a projekt leadása. |
 | 2026.11.24 | Nagy Bálint | A README.md fájl kidolgozása | --- |
+| 2026.11.24 | Szabó Bence | Word dokumentum befejezése, projekt leadása | --- |
 
 ## Másik pár tesztje
 
