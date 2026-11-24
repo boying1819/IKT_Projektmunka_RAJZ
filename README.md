@@ -1,5 +1,5 @@
 # IKT_Projektmunka_RAJZ
-Nagy Bálit - Szabó Bence
+Nagy Bálint - Szabó Bence
 
 Konzolos rajzoló
 
